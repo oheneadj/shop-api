@@ -1,0 +1,15 @@
+{
+  "name": "shopapi",
+  "version": "1.0.0",
+  "description": "a mock api for an ecommerce shop",
+  "main": "index.js",
+  "author": "Ohene Adjei",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.3.0"
+  }
+}
