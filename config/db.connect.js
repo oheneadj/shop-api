@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 //Connect to database
 const dbConnect = async () => {
     try {
-        await mongoose.connect("process.env.MONGO_DB_CONNECT")
+        await mongoose.connect("mongodb+srv://techspotlabs:kuzco555@techspotlabscluster.k06vf.mongodb.net/shopapi?retryWrites=true&w=majority")
         console.log('Database connected 🍜 ')
     } catch (error) {
         // Log debug error
@@ -12,3 +12,5 @@ const dbConnect = async () => {
         
     }
 }
+
+module.exports = { dbConnect }

@@ -16,6 +16,4 @@ productRouter.route("/:productId")
     .patch(updateProduct)
     .delete(deleteProduct);
 
-module.exports = {
-    productRouter
-}
+module.exports = productRouter;
