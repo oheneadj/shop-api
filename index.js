@@ -1,13 +1,16 @@
 const express = require('express');
-const productRouter = require('./routes/products.router');
-const app = express();
-
 //import database
 const { dbConnect } = require('./config/db.connect')
 
-app.use(express.json());
+//Import routes
+const productRouter = require('./routes/products.router');
+//const authRouter = require('./routes/auth.router')
 
-app.use("/products", productRouter);
+const app = express();
+
+ app.use(express.json());
+ app.use("/products", productRouter);
+//  app.use("/auth", authRouter);
 
 //Start server and connect to database
 
