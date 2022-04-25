@@ -4,13 +4,13 @@ const { dbConnect } = require('./config/db.connect')
 
 //Import routes
 const productRouter = require('./routes/products.router');
-//const authRouter = require('./routes/auth.router')
+const authRouter = require('./routes/auth.router')
 
 const app = express();
 
  app.use(express.json());
  app.use("/products", productRouter);
-//  app.use("/auth", authRouter);
+ app.use("/auth", authRouter);
 
 //Start server and connect to database
 

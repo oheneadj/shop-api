@@ -3,6 +3,7 @@ const Product = require('../model/product.model')
 // Create Product
 const createProduct = async(req, res) => {
     try {
+        console.log(req.user);
         const product = await Product.create(req.body);
         res.status(201).json(product)
     } catch (error) {
@@ -13,6 +14,7 @@ const createProduct = async(req, res) => {
 // Get All Products
 const getAllProducts = async(req, res) => {
     try {
+       console.log(req.user)
        const products = await Product.find({});
        res.status(200).json(products);
     } catch (error) {
